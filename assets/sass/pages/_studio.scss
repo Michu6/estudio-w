@@ -1,0 +1,15 @@
+// STUDIO
+#studiobg {
+	background: url('../images/bg3.jpg') 0 100% no-repeat;
+	background-size: cover;
+	.studio {
+		background-color: $opacity;
+		padding: 10% 0;
+		h2, p {
+			color: $white;
+		}
+		hr {
+			background-color: $white;
+		}
+	}
+}

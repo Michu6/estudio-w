@@ -1,0 +1,66 @@
+// CONTACT
+#contact {
+	.col-sm-8 {
+		p {
+			padding: 6% 6% 6% 0;
+		}
+		form {
+			input {
+				border-radius: 0px;
+			}
+			textarea {
+				border-radius: 0px;
+				height: 150px;
+				resize: none;
+			}
+			.btn {
+				@include font($white, bold, 1em);
+				background-color: darken($darksilver, 30);
+				border-radius: 0px;
+				letter-spacing: 0.05em;
+				padding: 1% 3%;
+				&:hover {
+					@include transition(0.2s);
+					background-color: $yellow;
+					color: black;
+				}
+			}
+		}
+	}
+	.info {
+		padding: 14% 0 0 15%;
+		.box {
+			padding: 15px 0;
+		}
+		p.tittle {
+			@include font($softblack, bold, 1em, $nobile);
+			span {
+				@include font($black, normal, 1em, $nobile);
+			}
+		}
+		.social-media {
+			&:first-child {
+				margin-bottom: 10px;
+			}
+			a {
+				margin-right: 7%;
+			}
+		}
+		.infolist {
+			li {
+				border-bottom: 1px solid darken($silver, 20);
+				margin-bottom: 20px;
+				a {
+					background-color: $black;
+					color: white;
+					padding: 5px;
+				}
+				p {
+					@include font(lighten($softblack, 10), bold, 0.9em, $nobile);
+					display: inline-block;
+					padding-left: 5%;
+				}
+			}
+		}
+	}
+}
