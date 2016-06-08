@@ -1,0 +1,17 @@
+// MIXINS
+@mixin font-face($font-name, $file-name) { 
+	@font-face {
+		font-family: quote($font-name);
+		src: url($file-name + '.ttf') format('truetype');
+	}
+}
+@mixin font($color, $weight, $size, $font: $nobile) {
+	color: $color;
+	font: $weight $size $font;
+}
+@mixin transition($trans-time) {
+-webkit-transition: all $trans-time ease-out;
+-moz-transition: all $trans-time ease-out;
+-o-transition: all $trans-time ease-out;
+transition: all $trans-time ease-out;
+}

@@ -1,0 +1,41 @@
+// PRICING
+#pricing {
+	.boxprice {
+		background-color: $silver;
+		p.price {
+			@include font($black, bold, 4em, $nobilebold);
+			padding-bottom: 5%;
+			.subprice {
+				font-size: 0.5em!important;
+			}
+		}
+		.row {
+			border-top: 1px solid darken($silver, 10);
+			margin: 0;
+			.col-sm-6 {
+				padding-top: 10%;
+				padding-bottom: 10%;
+				&:first-child {
+					border-right: 1px solid darken($silver, 10);
+				}
+			}
+		}
+		.btn {
+			@include font($white, bold, 1em);
+			background-color: $softblack;
+			border-radius: 0px;
+			letter-spacing: 0.05em;
+			padding: 6% 0;
+			width: 100%;
+			&:hover {
+				@include transition(0.2s);
+				background-color: $yellow;
+				color: $black;
+			}
+		}
+		img {
+			opacity: 0.5;
+			width: auto;
+		}
+	}
+}

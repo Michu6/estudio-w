@@ -1,0 +1,50 @@
+//- CONTACT
+section#contact
+	.container
+		.col-sm-8
+			+titsection("Contact Us")
+			p We love being a web designer and we're incredibly thankful that we decided to join this industry many years ago. Contact us so we can help better.
+			form
+				.form-group
+					input.form-control(type="text" placeholder="Name*")
+				.form-group
+					input.form-control(type="text" placeholder="Email*")
+				.form-group
+					input.form-control(type="text" placeholder="Subject")
+				.form-group
+					textarea.form-control(type="text" placeholder="Message*")
+				a.btn(href="#") SUBMIT
+		.col-sm-4
+			.info
+				p.tittle CONTACT INFO
+				.box
+					p 1455 10th St.
+					p Santa Monica, CA 90404
+				.box
+					p.tittle EMAIL: <span>yourmail@yourdomain.com</span>
+					p.tittle PHONE: <span>+88 (0) 101 0000 000</span>
+					p.tittle FAX: <span>+88 (0) 202 0000 000</span>
+				.box
+					p.tittle CONNECT WITH US
+					.box
+						.social-media
+							a(href="#").social_facebook
+							a(href="#").social_twitter
+							a(href="#").social_googleplus
+							a(href="#").social_pinterest
+							a(href="#").social_linkedin
+							a(href="#").social_tumblr
+						.social-media
+							a(href="#").social_tumbleupon
+							a(href="#").social_wordpress
+							a(href="#").social_dribbble
+							a(href="#").social_vimeo
+							a(href="#").social_skype
+							a(href="#").social_googledrive
+					.box
+						ul.infolist.list-unstyled
+							each link in linkslist
+								li
+									a(href="#").arrow_carrot-down
+									p #{link.name}
+

@@ -1,0 +1,83 @@
+//- BASE MIXINS
+mixin jpg(imgjpg)
+  img(src="assets/images/" + imgjpg + ".jpg")
+
+mixin video(video)
+  video(src="assets/images/" + video + ".mp4" controls)
+
+mixin titsection(title)
+  h2= title
+  hr
+
+//- HEADER
+mixin navbar-fixed-top(logolink, links)
+  .navbar-header
+    a.navbar-brand(href="")
+      +jpg("w-logo")
+    button(type='button',class='navbar-toggle collapsed',data-toggle='collapse',data-target='#bs-example-navbar-collapse-1',aria-expanded='false')
+      span.sr-only Toggle navigation
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+  .collapse.navbar-collapse#bs-example-navbar-collapse-1
+    ul.nav.navbar-nav.navbar-right
+      each link in links
+        li
+          a.active(href='#{link.url}') #{link.name} 
+
+//- SERVICES
+mixin png(imgpng)
+  img(src="assets/images/" + imgpng + ".png")
+
+mixin serviceslist(img, title)
+  li.media
+    .media-left
+      +png(img)
+    .media-body
+      h4= title
+      p= plorem
+
+//- TEAM
+mixin textteam(tittle, subtittle)
+  .textteam
+    h5= tittle
+    p.titlte= subtittle
+    p= description
+    .social-media
+      a(href="#").social_facebook
+      a(href="#").social_twitter
+      a(href="#").social_googleplus
+      a(href="#").social_pinterest
+      a(href="#").social_linkedin
+
+mixin rowteam1(img, tittle, subtittle)
+  .col-sm-3
+    +jpg(img)
+  .col-sm-3
+    +textteam(tittle, subtittle)
+    
+mixin rowteam2(img, tittle, subtittle)
+  .col-sm-3
+    +textteam(tittle, subtittle)
+  .col-sm-3
+    +jpg(img)
+
+//- OFFERS
+mixin priceicon(img, text)
+  .col-sm-6
+    +png(img)
+    p= text
+
+mixin pricing(price, text1, text2, text3, text4)
+  .col-sm-3
+    .boxprice
+      h3 Starter
+      p.price= price
+        |<span class="subprice"> /mo</span>
+      .row
+        +priceicon("man88", text1)
+        +priceicon("rectangles29", text2)
+      .row
+        +priceicon("database22", text3)
+        +priceicon("email162", text4)
+      .btn.btn-dark ORDER NOW

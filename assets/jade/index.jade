@@ -1,0 +1,18 @@
+include views/helpers/variables
+include views/helpers/mixins
+doctype html
+html(lang="en")
+	head
+		include views/head
+	body.scroll-bar
+		include views/header
+		include views/services
+		include views/studio
+		include views/team
+		include views/offers
+		include views/contact
+		include views/footer
+		script(type='text/javascript', src='assets/js/jquery.js')
+		script(type='text/javascript', src='assets/js/bootstrap.min.js')
+		script(type='text/javascript', src='assets/js/agency.js')
+		script(type='text/javascript', src='assets/js/main.js')

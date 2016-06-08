@@ -1,0 +1,56 @@
+// HEADER
+header {
+	background: url('../images/home4.jpg') 0 100% no-repeat fixed;
+	background-size: cover;
+	color: $white;
+	#header {
+		background-color: $opacity;
+		padding: 16% 0 28%;
+		p.sub {
+			@include font($silver, normal, 1.7em);
+			margin: 0 22%;
+		}
+	}
+}
+nav {
+	@include font($white, bold, 0.8em);
+	padding-top: 2%;
+	.nav {
+		padding: 2.2% 0 0 5%;
+		a {
+			color: white;
+			&:hover {
+				background-color: $black;
+			}
+			&:focus {
+				background-color: transparent;
+			}
+		}	
+	}
+}
+@mixin navbar-white (){
+	header .navbar ul {
+	padding-top: 50px;
+		li a {
+			color: $white;
+			&:hover {
+				background-color: $white;
+				color: $yellow;
+			}
+			&.active {
+				color: $white;
+			}
+		}
+	}
+}
+.nav-transparent {
+	@include transition(0.4);
+	@include navbar-white();
+	background-color: transparent;
+}
+
+.nav-black {
+	@include transition(0.4s);
+	background-color: $black;
+	padding-bottom: 20px;
+}

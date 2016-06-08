@@ -1,0 +1,56 @@
+@include font-face('Nobile', '../fonts/nobile_regular/nobile');
+@include font-face('Nobile-bold', '../fonts/nobile_regular/nobile_bold');
+
+body {
+	font-family: $nobile;
+	&.scroll-bar::-webkit-scrollbar {
+		width: 7px;
+	}
+	&.scroll-bar::-webkit-scrollbar-thumb {
+		background-color: lighten($softblack, 30);
+		border-radius: 45px;
+	}
+}
+img, video {
+	width: 100%;
+}
+h1, h2, h3, h4, h5 {
+	font-weight: bold;
+}
+h1 {
+	@include font($white, bold, 3.8em, $nobilebold);
+}
+h2 {
+	@include font($black, bold, 2.5em, $nobilebold);
+	margin-top: 0;
+	margin-right: 58%;
+}
+h3 {
+	@include font(darken($darksilver, 20), bold, 2.1em, $nobilebold);
+}
+h4 {
+	@include font(darken($darksilver, 20), bold, 1em, $nobilebold);
+}
+h5 {
+	@include font($black, bold, 1em, $nobilebold);
+}
+p {
+	@include font($black, normal, 0.9em, $nobile);
+}
+hr {
+	background-color: black;
+	border-style: none;
+	height: 2px;
+	margin-right: 100%;
+	width: 50px;
+}
+section, footer {
+	margin-top: 12%;
+}
+.social-media a {
+	&:hover {
+		@include transition(0.2s);
+		text-decoration: none;
+		color: $yellow;
+	}
+}

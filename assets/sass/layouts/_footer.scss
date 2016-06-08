@@ -1,0 +1,18 @@
+// FOOTER
+footer {
+	background-color: $silver;
+	padding: 2% 0;
+	img {
+		width: auto;
+	}
+	.col-sm-8 {
+		padding-top: 1.4%;
+		p {
+			@include font($softblack, normal, 0.8em, $nobile);
+			margin-bottom: 0;
+		}
+	}
+	.social-media {
+		padding-top: 15%;
+	}
+}

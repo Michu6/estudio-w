@@ -1,0 +1,27 @@
+// TEAM
+#team {
+	.row {
+		padding: 0 15px;
+		.col-sm-3 {
+			padding: 0;
+			.textteam {
+				padding: 10% 10% 0;
+				p {
+					padding-bottom: 8%;
+				}
+			}
+		}
+		&:last-child {
+			.textteam {
+				text-align: right;
+				padding-left: 5%;
+			}
+		}
+	}
+}
+.social-media {
+	a {
+		color: $darksilver;
+		margin-right: 10%;
+	}
+}
